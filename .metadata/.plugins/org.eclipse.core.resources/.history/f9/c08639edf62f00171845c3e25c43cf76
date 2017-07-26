@@ -1,0 +1,30 @@
+var app=angular.module('managementapp',[]);
+app.controller("LoginController", ["$scope","$http","dataService", function($scope,$http,dataService){
+	$scope.doLogin = function() {
+		alert("Angular test");
+		alert($scope.loginUsername);
+		alert($scope.loginPassword);
+		dataService.login.validateLogin($scope.loginUsername,
+				$scope.loginPassword)
+	}
+}]);
+
+app.service("dataService",["$http",function($http){
+	result = {};
+	result = {
+		"login" : {
+			validateLogin : function(loginName, password) {
+				return $http.get(
+						'/login/validate/?time='
+								+ new Date().getTime()
+								+ '&username=' + loginName
+								+ '&password=' + password)
+						.then(function(result) {
+							return result.data;
+						});
+			}
+		}
+
+	}
+	return result;
+}]);
