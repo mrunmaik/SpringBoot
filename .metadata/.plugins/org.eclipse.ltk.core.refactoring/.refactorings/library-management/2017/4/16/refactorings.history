@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move &apos;LoginController.js&apos; to &apos;controller&apos;" description="Move &apos;LoginController.js&apos; to &apos;controller&apos;" destination="src/main/webapp/resources/js/controller" element1="src/main/webapp/resources/js/LoginController.js" flags="7" id="org.eclipse.ltk.core.refactoring.move.resources" resources="1" stamp="1492686215762" updateReferences="true"/>
+</session>

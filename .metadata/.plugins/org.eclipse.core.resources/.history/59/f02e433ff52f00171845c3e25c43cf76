@@ -1,0 +1,18 @@
+angular.module('managementapp', [ "dataService" ]).controller(
+		'LoginController',
+		[
+				"$http",
+				"$scope",
+				"dataService",
+				function($http, $scope, dataService) {
+					// $scope.userName = loginUsername;
+					// $scope.password = loginPassword;
+					$scope.doLogin = function() {
+						alert("Angular test");
+						alert($scope.loginUsername);
+						alert($scope.loginPassword);
+						dataService.login.validateLogin($scope.loginUsername,
+								$scope.loginPassword)
+					}
+
+				} ]);
