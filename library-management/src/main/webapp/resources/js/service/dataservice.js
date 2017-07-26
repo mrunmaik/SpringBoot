@@ -20,6 +20,7 @@ angular.module('managementapp').service(
 										}).then(function(result) {
 									return result.data;
 								});
+
 							}
 						}
 
